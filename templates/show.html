@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Show data</title>
+</head>
+<body bgcolor="cyan">
+<h1> Users Names </h1>
+
+{%for d in data%}
+
+{{d.id}} &emsp; &emsp; {{d.name}} &emsp; &emsp <form action="delete" method="post">{%csrf_token%} <input type="submit" value="Delete"> </form> <br>
+
+<br>
+{% endfor %}
+</body>
+</html>
